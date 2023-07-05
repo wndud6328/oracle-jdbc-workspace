@@ -7,4 +7,4 @@ SELECT * FROM MEMBER;
 
 
 
-drop table member;
+DROP TABLE MEMBER;
