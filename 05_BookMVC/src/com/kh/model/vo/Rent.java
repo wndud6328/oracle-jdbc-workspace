@@ -3,11 +3,13 @@ package com.kh.model.vo;
 import java.util.Date;
 
 public class Rent {
-
+	
 	private int rentNo;
 	private Member member;
 	private Book book;
 	private Date rentDate;
+	
+	public Rent() {}
 	
 	public Rent(int rentNo, Member member, Book book, Date rentDate) {
 		this.rentNo = rentNo;
@@ -15,7 +17,12 @@ public class Rent {
 		this.book = book;
 		this.rentDate = rentDate;
 	}
-	
+
+	public Rent(Member member, Book book) {
+		this.member = member;
+		this.book = book;
+	}
+
 	public int getRentNo() {
 		return rentNo;
 	}
@@ -45,5 +52,5 @@ public class Rent {
 	public String toString() {
 		return "Rent [rentNo=" + rentNo + ", member=" + member + ", book=" + book + ", rentDate=" + rentDate + "]";
 	}
-	
+
 }

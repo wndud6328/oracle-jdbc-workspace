@@ -4,8 +4,6 @@ import java.util.Date;
 
 public class Member {
 	
-	public Member(String id, String password, String name) {
-	}
 	private int memberNo;
 	private String memberId;
 	private String memberPwd;
@@ -13,16 +11,16 @@ public class Member {
 	private char status;
 	private Date enrollDate;
 	
-	public Member(int memberNo, String memberId, String memberPwd, String memberName, char status, Date enrollDate) {
-		this.memberNo = memberNo;
-		this.memberId = memberId;
-		this.memberPwd = memberPwd;
-		this.memberName = memberName;
-		this.status = status;
-		this.enrollDate = enrollDate;
+	public Member() {}
+	
+	public Member(String id, String password, String name) {
+		this.memberId = id;
+		this.memberPwd = password;
+		this.memberName = name;
 	}
 
-	public Member() {
+	public Member(int memberNo) {
+		this.memberNo = memberNo;
 	}
 
 	public int getMemberNo() {
@@ -73,13 +71,10 @@ public class Member {
 		this.enrollDate = enrollDate;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "Member [memberNo=" + memberNo + ", memberId=" + memberId + ", memberPwd=" + memberPwd + ", memberName="
 				+ memberName + ", status=" + status + ", enrollDate=" + enrollDate + "]";
 	}
-	
-
 	
 }
